@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="UWP_Universal_App_Navigation.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Thickness x:Key="MarginText">0 20 0 20</Thickness>
+    </Page.Resources>
+    <Grid Background="#FF00950E">
+        <Grid Width="500" Margin="{StaticResource MarginText}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+        
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Student Information" Grid.Row="0" Grid.Column="1" FontSize="20" Margin="{StaticResource MarginText}"></TextBlock>
+            <TextBlock Text="Id" Grid.Row="1" Grid.Column="0" Margin="{StaticResource MarginText}"/>
+            <TextBox Name="txtId" Grid.Row="1" Grid.Column="1" Margin="{StaticResource MarginText}"/>
+            <TextBlock Text="Name" Name="tbName" Grid.Row="2" Grid.Column="0" Margin="{StaticResource MarginText}"></TextBlock>
+            <TextBox Name="txtName" Grid.Row="2" Grid.Column="2" Margin="{StaticResource MarginText}"></TextBox>
+            <TextBlock Text="Date of Birth" Name="tbDateofBirth" Grid.Row="3" Grid.Column="0" Margin="{StaticResource MarginText}"></TextBlock>
+            <DatePicker Name="dpDateofBirth" Grid.Row="3" Grid.Column="2" Margin="{StaticResource MarginText}"/>
+            <Button Content="Submit" Name="btnSubmit" Click="btnSubmit_Click" Grid.Column="1" Grid.Row="4"></Button>
+        </Grid>
+    </Grid>
+</Page>

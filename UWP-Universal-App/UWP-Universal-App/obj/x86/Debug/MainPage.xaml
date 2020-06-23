@@ -1,0 +1,64 @@
+﻿<Page
+    x:Class="UWP_Universal_App.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWP_Universal_App"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.TopAppBar>
+        <AppBar>
+            <StackPanel Orientation="Horizontal">
+                <AppBarButton x:ConnectionId='2'             
+                    Label="Home"
+                    Icon="Home"
+                    Name="btnStackPanel"
+                                               > // Vì chưa có sự kiện  nhấn Ctrl + Space -> Chọn sự kiện đó
+                </AppBarButton>
+                <AppBarButton x:ConnectionId='3'          
+                    Icon="Go"
+                    Name="btnGrid"
+                                         >
+                </AppBarButton>
+                <AppBarButton x:ConnectionId='4'          
+                    Icon="Admin"
+                    Name="btnScrollView"
+                                               >
+                </AppBarButton>
+                <AppBarButton x:ConnectionId='5'          
+                    Icon="AddFriend"
+                    Name="btnRelativePage"
+                                                 >
+                </AppBarButton>
+                <AppBarButton x:ConnectionId='6'          
+                    Icon="Bullets"
+                    Name="btnSplitViewPage"
+                                                  >
+                </AppBarButton>
+            </StackPanel>
+        </AppBar>
+    </Page.TopAppBar>
+ 
+    <Grid FocusVisualPrimaryBrush="#FF17FF00" Margin="26,5,10,5" FocusVisualSecondaryBrush="#99F50000" Background="#FF23FF00">
+        <TextBox HorizontalAlignment="Left" Margin="60,104,0,0" Text="Hello World" TextWrapping="Wrap" VerticalAlignment="Top" Height="433" Width="873" FontSize="100" TextAlignment="Center" Background="{ThemeResource SystemControlBackgroundBaseLowBrush}"/>
+        <Canvas Margin="50">
+            <Rectangle Fill="#FF7381DC" Canvas.Top="224" Canvas.Left="170" Width="200" Height="150px"></Rectangle>
+            <Ellipse Fill="Aqua" Canvas.Left="479" Canvas.Top="195" Width="300" Height="200"></Ellipse>
+            <Polygon Fill="CadetBlue" Points="100,100 300,0 300, 300" Canvas.Left="221" Canvas.Top="179"></Polygon>
+            <TextBlock Canvas.Left="353" Canvas.Top="251" TextWrapping="Wrap" FontSize="50"><Run Text="Canvas"/><LineBreak/><Run/></TextBlock>
+            <Button x:ConnectionId='7' Name="btnOpenContentDialog"                                    Content="Content Dialog"></Button>
+            <Button x:ConnectionId='8' Name="btnFlayout" Content="Flayout Button" Canvas.Left="400">
+                <Button.Flyout>
+                    <Flyout>
+                        <StackPanel>
+                            <TextBlock Text="This is a sample flyout"></TextBlock>
+                            <Button Content="Flayout Button"></Button>
+                        </StackPanel>
+                    </Flyout>
+                </Button.Flyout>
+            </Button>
+        </Canvas>
+    </Grid>
+</Page>
+
